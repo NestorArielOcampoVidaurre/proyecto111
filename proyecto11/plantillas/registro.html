@@ -1,0 +1,17 @@
+
+
+{% block title %}
+	<h1>Registro</h1>
+{% endblock %}
+
+{% block contenido %}
+<title>registro</title>
+		<link type="text/css" rel="stylesheet" href="/static/stylos2.css"/>
+	<body>
+		<form action="" method="POST">
+			{{formulario.as_p}}
+				<input type="submit" name="bregistro" value="registro"><br>
+				{% csrf_token %}
+		</form>
+	</body>
+{% endblock %}
