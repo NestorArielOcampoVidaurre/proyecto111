@@ -1,0 +1,17 @@
+
+
+{% block title %}
+	<h1>Registro</h1>
+{% endblock %}
+
+{% block contenido %}
+	<form action="" method="POST">
+		{{formulario.as_p}}
+		
+		Pais :		<input type="text" name="pais" value="telefono"><br>
+		Telefono :	<input type="text" name="telefono" value="telefono">
+					<input type="submit" name="bregistro" value="registro"><br>
+					{% csrf_token %}
+	</form>
+
+{% endblock %}
