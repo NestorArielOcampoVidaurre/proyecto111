@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/static/stilos.css">
+	<title>Página Principal</title>
+</head>
+<body>
+	HOLA MUNDO
+	<ul id="menu">
+		<li>Inicio</li>
+		<li>Perfil</li>
+		<li>Login</li>
+		<li>Registro</li>
+	</ul>
+	{{fecha}}
+	<div class="articulos">
+		<ul>
+			{%for item in listadearticulos %}
+				<li>
+					<h1>{{item.Titulo}}</h1>
+					<div>{{item.fecha}}</div>
+					<div>
+						{{item.Contenido}}
+					</div>
+					<ul id="comentarios">
+					{%for comentarios in item.comentario_set.all%}
+						<li>
+							<div>
+								{{comentarios.fecha}}
+								{{comentarios.email}}
+							</div>
+							<div>
+								{{comentarios.Contenido}}	
+							</div>
+					 	</li>
+					{%endfor%}
+					</ul>
+				</li>
+			{%endfor%}
+		</ul>
+	</div>
+	<form action="" method="post">
+		{{ArticuloForm.as_ul}}
+		{% csrf_token %}
+		<input type="submit" value="Enviar">
+	</form>
+</body>
+</html>
