@@ -1,8 +1,18 @@
 {%block container%}
 <h1>Registro</h1>
+<body>	
+	<head>
+		<link type="text/css" rel="stylesheet" href="/static/stylos3.css"/>
+		<div>
+			
+		</div>
+		
+	</head>
+	
 <form action="" method="post">
 	{{form.as_ul}}
 	{% csrf_token %}
 	<input type="submit" value="Enviar">
 </form>
 {%endblock%}
+</body>

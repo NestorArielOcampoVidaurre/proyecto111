@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -16,7 +17,10 @@
 					<menu ><b><a  href="/blog/registro/">REGISTRO</b></menu>
 					<menu ><b><a href="/blog/login/">LOGIN</a></b></menu>
 					<menu ><b><a  href="/blog/">BLOG</a></b></menu>
+					{% endif %}
+					{% if not user.is_anonymous %}
 					<menu ><b><a href="/blog/logout/">{{user}} LOGOUT</a></b></menu>
+					{% endif %}
 				</nav></center>
 			</div>
 		</header>  
