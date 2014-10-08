@@ -9,4 +9,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', principal),
     url(r'^registro/$', registro),
-)
+    url(r'^bienvenidos/$', bienvenidos),
+) 
